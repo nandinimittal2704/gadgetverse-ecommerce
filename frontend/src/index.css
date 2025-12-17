@@ -126,6 +126,59 @@ body.theme-dark .form-control:focus {
   border-color: #2563eb;
 }
 
+/* Ensure selects and their options are readable in dark mode */
+body.theme-dark select,
+body.theme-dark select.form-control,
+body.theme-dark select.form-select,
+body.theme-dark .form-control,
+body.theme-dark .form-select {
+  background-color: var(--card-bg) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Options: force a clear dark background and white text for cross-browser clarity */
+body.theme-dark select option,
+body.theme-dark select.form-control option,
+body.theme-dark .form-select option,
+body.theme-dark .form-control option {
+  background-color: #0b0b0d !important;
+  color: #ffffff !important;
+}
+
+/* Visible states for selected/hovered options */
+body.theme-dark select option:checked,
+body.theme-dark select option:hover {
+  background-color: rgba(37,99,235,0.15) !important;
+  color: #ffffff !important;
+}
+
+/* Hide default expand arrow on some browsers so custom styles apply better */
+body.theme-dark select::-ms-expand {
+  display: none;
+}
+/* Ensure select uses no native appearance on WebKit/Blink */
+body.theme-dark select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+}
+
+
+/* Make the "Go Back" / .btn-light readable in dark mode */
+body.theme-dark .btn-light {
+  background-color: rgba(255,255,255,0.06) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+}
+body.theme-dark .btn-light:hover {
+  background-color: rgba(255,255,255,0.12) !important;
+}
+
+
 body.theme-dark .list-group-item {
   background-color: var(--card-bg);
   color: var(--text);
